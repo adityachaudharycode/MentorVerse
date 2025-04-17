@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Mentorverse</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="dashboard-nav">
+        <div class="logo">Mentorverse</div>
+        <div class="nav-links">
+            <a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="#mentors"><i class="fas fa-users"></i> Find Mentors</a>
+            <a href="#sessions"><i class="fas fa-calendar"></i> My Sessions</a>
+            <a href="#resources"><i class="fas fa-book"></i> Resources</a>
+        </div>
+        <div class="user-menu">
+            <img src="https://placeholder.com/30" alt="Profile" id="profileImage" class="profile-pic">
+            <span id="userName">Loading...</span>
+            <button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Welcome back, <span id="studentName">Student</span>!</h1>
+            <p class="last-login">Last login: <span id="lastLogin">Loading...</span></p>
+        </div>
+
+        <div class="dashboard-grid">
+            <!-- Upcoming Sessions -->
+            <div class="dashboard-card">
+                <h2><i class="fas fa-calendar"></i> Upcoming Sessions</h2>
+                <div id="upcomingSessions" class="sessions-list">
+                    <!-- Sessions will be loaded dynamically -->
+                </div>
+                <button class="action-btn">Schedule New Session</button>
+            </div>
+
+            <!-- My Mentors -->
+            <div class="dashboard-card">
+                <h2><i class="fas fa-user-graduate"></i> My Mentors</h2>
+                <div id="myMentors" class="mentors-list">
+                    <!-- Mentors will be loaded dynamically -->
+                </div>
+                <button class="action-btn">Find New Mentor</button>
+            </div>
+
+            <!-- Progress Tracker -->
+            <div class="dashboard-card">
+                <h2><i class="fas fa-chart-line"></i> My Progress</h2>
+                <div class="progress-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Sessions Completed</span>
+                        <span class="stat-value" id="sessionsCompleted">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Hours Learned</span>
+                        <span class="stat-value" id="hoursLearned">0</span>
+                    </div>
+                </div>
+                <div id="subjectProgress">
+                    <!-- Subject progress bars will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Study Resources -->
+            <div class="dashboard-card">
+                <h2><i class="fas fa-book"></i> Study Resources</h2>
+                <div id="studyResources" class="resources-list">
+                    <!-- Resources will be loaded dynamically -->
+                </div>
+                <button class="action-btn">Browse All Resources</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="student-dashboard.js"></script>
+</body>
+</html>
