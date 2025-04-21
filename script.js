@@ -8,7 +8,27 @@ hamburger.addEventListener('click', () => {
     authButtons.style.display = authButtons.style.display === 'flex' ? 'none' : 'flex';
 });
 
-// Smooth scrolling for navigation links
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+    duration: 800,
+    once: true
+});
+
+// Testimonial Slider
+const testimonialSlider = new Swiper('.testimonial-slider', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    }
+});
+
+// Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -18,13 +38,77 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background change on scroll
+// Counter animation for stats
+const stats = document.querySelectorAll('.stat-number');
+stats.forEach(stat => {
+    const target = parseInt(stat.textContent);
+    let current = 0;
+    const increment = target / 50;
+    const updateCount = () => {
+        if (current < target) {
+            current += increment;
+            stat.textContent = Math.ceil(current);
+            setTimeout(updateCount, 20);
+        } else {
+            stat.textContent = target;
+        }
+    };
+    updateCount();
+});
+
+// Demo video modal
+const demoBtn = document.querySelector('.cta-btn.secondary');
+demoBtn.addEventListener('click', () => {
+    // Add your video modal implementation here
+});
+
+// Add hover effect for feature cards
+document.querySelectorAll('.feature-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0)';
+    });
+});
+
+// Theme toggle functionality
+const themeToggle = document.querySelector('.theme-toggle');
+const themeIcon = themeToggle.querySelector('i');
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    document.body.classList.toggle('light-theme', savedTheme === 'light');
+    themeIcon.classList.toggle('fa-sun', savedTheme === 'light');
+    themeIcon.classList.toggle('fa-moon', savedTheme === 'dark');
+}
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    const isLight = document.body.classList.contains('light-theme');
+    
+    // Update icon
+    themeIcon.classList.toggle('fa-sun', isLight);
+    themeIcon.classList.toggle('fa-moon', !isLight);
+    
+    // Save preference
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+// Update navbar background based on theme
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
+    const isLight = document.body.classList.contains('light-theme');
+    
     if (window.scrollY > 50) {
-        nav.style.background = 'rgba(18, 18, 18, 0.95)';
+        nav.style.background = isLight 
+            ? 'rgba(255, 255, 255, 0.95)' 
+            : 'rgba(18, 18, 18, 0.95)';
     } else {
-        nav.style.background = 'rgba(18, 18, 18, 0.8)';
+        nav.style.background = isLight 
+            ? 'rgba(255, 255, 255, 0.8)' 
+            : 'rgba(18, 18, 18, 0.8)';
     }
 });
 
@@ -57,3 +141,4 @@ document.querySelectorAll('.feature-card, .mentor-card').forEach(element => {
     element.style.transition = 'all 0.5s ease-out';
     observer.observe(element);
 });
+
