@@ -1,11 +1,25 @@
 // Mobile menu toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const authButtons = document.querySelector('.auth-buttons');
+const menuToggle = document.getElementById('menuToggle');
+const mobileNav = document.getElementById('mobileNav');
+const closeMenu = document.getElementById('closeMenu');
 
-hamburger.addEventListener('click', () => {
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-    authButtons.style.display = authButtons.style.display === 'flex' ? 'none' : 'flex';
+// Function to toggle mobile menu
+function toggleMobileMenu() {
+    mobileNav.classList.toggle('active');
+    document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
+}
+
+// Open mobile menu when hamburger is clicked
+menuToggle.addEventListener('click', toggleMobileMenu);
+
+// Close mobile menu when close button is clicked
+closeMenu.addEventListener('click', toggleMobileMenu);
+
+// Close mobile menu when a link is clicked
+document.querySelectorAll('#mobileNav .nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        toggleMobileMenu();
+    });
 });
 
 // Initialize AOS (Animate On Scroll)
@@ -87,11 +101,11 @@ if (savedTheme) {
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-theme');
     const isLight = document.body.classList.contains('light-theme');
-    
+
     // Update icon
     themeIcon.classList.toggle('fa-sun', isLight);
     themeIcon.classList.toggle('fa-moon', !isLight);
-    
+
     // Save preference
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
@@ -100,14 +114,14 @@ themeToggle.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     const isLight = document.body.classList.contains('light-theme');
-    
+
     if (window.scrollY > 50) {
-        nav.style.background = isLight 
-            ? 'rgba(255, 255, 255, 0.95)' 
+        nav.style.background = isLight
+            ? 'rgba(255, 255, 255, 0.95)'
             : 'rgba(18, 18, 18, 0.95)';
     } else {
-        nav.style.background = isLight 
-            ? 'rgba(255, 255, 255, 0.8)' 
+        nav.style.background = isLight
+            ? 'rgba(255, 255, 255, 0.8)'
             : 'rgba(18, 18, 18, 0.8)';
     }
 });

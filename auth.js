@@ -34,9 +34,11 @@ loginForm.addEventListener('submit', async (e) => {
         
         // Direct redirect based on role
         if (userData.role === 'mentor') {
-            window.location = 'mentor-dashboard.html';
+            window.location = 'Mentor-dashboard/project/index.html';
+            
+        
         } else if (userData.role === 'student') {
-            window.location = 'student-dashboard.html';
+            window.location = 'student dashboard/Student_hyml.html';
         } else {
             throw new Error('Invalid user role');
         }
