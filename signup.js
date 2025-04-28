@@ -51,7 +51,7 @@ studentForm.addEventListener('submit', async (e) => {
         await db.collection('users').doc(userCredential.user.uid).set(userData);
 
         // 4. Redirect to student dashboard
-        window.location.href = 'student-dashboard.html';
+        window.location.href = 'student dashboard/Student_hyml.html';
     } catch (error) {
         console.error('Signup error:', error);
         alert(error.message);
@@ -97,7 +97,7 @@ mentorForm.addEventListener('submit', async (e) => {
         await db.collection('users').doc(userCredential.user.uid).set(userData);
 
         // 4. Redirect to mentor dashboard
-        window.location.href = 'mentor-dashboard.html';
+        window.location.href = 'Mentor-dashboard/project/index.html';
     } catch (error) {
         console.error('Signup error:', error);
         alert(error.message);
