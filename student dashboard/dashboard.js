@@ -164,59 +164,59 @@ document.addEventListener('DOMContentLoaded', () => {
 // Define mentor data
 const mentorData = [
     {
-        name: "Dr. Sarah Johnson",
+        name: "Dr. Abhishek Ranjan",
         expertise: "GATE CS",
         rating: 4.9,
-        image: "mentor1.jpg",
+        image: "images/image3.png",
         experience: "8 years",
         students: 500,
         about: "Expert in Computer Networks and Operating Systems",
         achievements: ["Best Mentor Award 2022", "PhD from IIT Delhi"],
-        price: "₹1200/hour"
+        price: "₹100/hour"
     },
     {
-        name: "Prof. Rajesh Kumar",
+        name: "Dr. Ankita Patra",
         expertise: "GATE EE",
         rating: 4.8,
-        image: "mentor2.jpg",
+        image: "images/image4.png",
         experience: "12 years",
         students: 800,
         about: "Specializes in Power Systems and Control Engineering",
         achievements: ["Published 25+ Research Papers", "IIT Bombay Alumni"],
-        price: "₹1500/hour"
+        price: "₹150/hour"
     },
     {
         name: "Dr. Priya Sharma",
         expertise: "CAT",
         rating: 4.9,
-        image: "mentor3.jpg",
+        image: "images/image5.png",
         experience: "6 years",
         students: 1000,
         about: "Quantitative Aptitude and Data Interpretation Expert",
         achievements: ["99.9 percentile in CAT", "MBA from IIM Ahmedabad"],
-        price: "₹1800/hour"
+        price: "₹180/hour"
     },
     {
         name: "Mr. Arun Verma",
         expertise: "IAS",
         rating: 4.7,
-        image: "mentor4.jpg",
+        image: "images/image6.png",
         experience: "10 years",
         students: 300,
         about: "Expert in Current Affairs and Indian Polity",
         achievements: ["AIR 50 in UPSC", "Former IAS Officer"],
-        price: "₹2000/hour"
+        price: "₹200/hour"
     },
     {
         name: "Dr. Meera Patel",
         expertise: "GATE CS",
         rating: 4.8,
-        image: "mentor5.jpg",
+        image: "images/image7.png",
         experience: "7 years",
         students: 600,
         about: "Data Structures and Algorithms Specialist",
         achievements: ["Microsoft Certified Trainer", "Ex-Google Engineer"],
-        price: "₹1400/hour"
+        price: "₹140/hour"
     }
 ];
 
