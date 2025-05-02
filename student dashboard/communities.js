@@ -4,28 +4,28 @@ const communityData = [
         id: 'gate-cs',
         name: 'GATE CS Aspirants',
         members: '3.5K',
-        image: 'gate-cs-community.jpg',
+        image: 'images/gate-cs-community.jpg',
         description: 'A community for GATE CS aspirants to discuss topics, share resources, and help each other.'
     },
     {
         id: 'cat-prep',
         name: 'CAT Preparation Hub',
         members: '2.8K',
-        image: 'cat-prep-community.jpg',
+        image: 'images/cat-prep-community.jpg',
         description: 'Connect with fellow CAT aspirants, share mock test strategies and preparation tips.'
     },
     {
         id: 'ias-circle',
         name: 'IAS Achievers Circle',
         members: '4.2K',
-        image: 'ias-community.jpg',
+        image: 'images/ias-community.jpg',
         description: 'A dedicated community for UPSC aspirants to discuss current affairs and preparation strategies.'
     },
     {
         id: 'gate-ee',
         name: 'GATE EE Network',
         members: '2.1K',
-        image: 'gate-ee-community.jpg',
+        image: 'images/gate-ee-community.jpg',
         description: 'Connect with GATE EE aspirants, share study materials and discuss electrical engineering topics.'
     }
 ];
