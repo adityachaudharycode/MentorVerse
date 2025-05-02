@@ -1,35 +1,52 @@
-// Main JavaScript File
+// Main JavaScript File - Simplified
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize components
   initializeNavigation();
   
+  // Create sidebar overlay if it doesn't exist
+  let overlay = document.querySelector('.sidebar-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.className = 'sidebar-overlay';
+    document.body.appendChild(overlay);
+  }
+  
   // Set up mobile sidebar toggle
-  const sidebarToggle = document.getElementById('sidebarToggle');
+  const sidebarToggleBtn = document.getElementById('sidebarToggleBtn');
   const sidebar = document.getElementById('sidebar');
   
-  if (sidebarToggle && sidebar) {
-    sidebarToggle.addEventListener('click', function() {
-      sidebar.classList.toggle('active');
+  if (sidebarToggleBtn && sidebar) {
+    sidebarToggleBtn.addEventListener('click', function() {
+      toggleSidebar();
     });
   }
   
-  // Close sidebar when clicking outside on mobile
-  document.addEventListener('click', function(event) {
-    const isMobile = window.innerWidth <= 768;
-    const isClickInsideSidebar = sidebar.contains(event.target);
-    const isClickOnToggle = sidebarToggle.contains(event.target);
-    
-    if (isMobile && sidebar.classList.contains('active') && !isClickInsideSidebar && !isClickOnToggle) {
-      sidebar.classList.remove('active');
-    }
+  function toggleSidebar() {
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+  }
+  
+  // Close sidebar when clicking on overlay
+  overlay.addEventListener('click', function() {
+    closeSidebar();
   });
   
-  // Handle window resize
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 768) {
-      sidebar.classList.remove('active');
-    }
+  // Close sidebar when clicking on navigation links
+  const navLinks = sidebar.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      if (window.innerWidth <= 768) {
+        closeSidebar();
+      }
+    });
   });
+  
+  function closeSidebar() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
   
   // Initialize modal functionality
   initializeModals();

@@ -351,5 +351,88 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
+// Add this to your existing JavaScript
+// document.addEventListener('DOMContentLoaded', () => {
+//   // Chatbot icon functionality
+//   const chatbotIcon = document.getElementById('chatbotIcon');
+//   
+//   if (chatbotIcon) {
+//     // Replace this URL with your actual chatbot URL
+//     chatbotIcon.href = "https://your-chatbot-url.com";
+//     
+//     // Optional: Stop pulsing animation after first click
+//     chatbotIcon.addEventListener('click', () => {
+//       chatbotIcon.classList.remove('pulse');
+//     });
+//     
+//     // Optional: Show a welcome message after 3 seconds
+//     setTimeout(() => {
+//       const welcomeMessage = document.createElement('div');
+//       welcomeMessage.className = 'chatbot-welcome';
+//       welcomeMessage.innerHTML = `
+//         <div class="welcome-bubble">
+//           Need help? Chat with our AI assistant!
+//           <span class="close-welcome">&times;</span>
+//         </div>
+//       `;
+//       document.body.appendChild(welcomeMessage);
+//       
+//       // Add styles for the welcome message
+//       const style = document.createElement('style');
+//       style.textContent = `
+//         .chatbot-welcome {
+//           position: fixed;
+//           bottom: 100px;
+//           right: 30px;
+//           z-index: 999;
+//         }
+//         .welcome-bubble {
+//           background: white;
+//           padding: 10px 15px;
+//           border-radius: 20px;
+//           box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+//           font-size: 14px;
+//           position: relative;
+//           max-width: 220px;
+//         }
+//         .welcome-bubble:after {
+//           content: '';
+//           position: absolute;
+//           bottom: -10px;
+//           right: 20px;
+//           border-width: 10px 10px 0;
+//           border-style: solid;
+//           border-color: white transparent;
+//         }
+//         .close-welcome {
+//           cursor: pointer;
+//           margin-left: 5px;
+//           font-weight: bold;
+//         }
+//       `;
+//       document.head.appendChild(style);
+//       
+//       // Close button functionality
+//       const closeBtn = document.querySelector('.close-welcome');
+//       if (closeBtn) {
+//         closeBtn.addEventListener('click', (e) => {
+//           e.preventDefault();
+//           e.stopPropagation();
+//           welcomeMessage.remove();
+//         });
+//       }
+//       
+//       // Remove welcome message when clicking the chatbot icon
+//       chatbotIcon.addEventListener('click', () => {
+//         welcomeMessage.remove();
+//       });
+//       
+//       // Auto-remove after 10 seconds
+//       setTimeout(() => {
+//         if (document.body.contains(welcomeMessage)) {
+//           welcomeMessage.remove();
+//         }
+//       }, 10000);
+//     }, 3000);
+//   }
 

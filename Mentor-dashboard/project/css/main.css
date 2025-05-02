@@ -536,48 +536,88 @@ input:focus, select:focus, textarea:focus {
   }
 }
 
+/* Mobile Sidebar Toggle Button - Repositioned to top left */
+.sidebar-toggle-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-md);
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: none;
+}
+
+/* Responsive Styles - Adjusted for top-left toggle */
 @media (max-width: 768px) {
   :root {
-    --sidebar-width: 0;
+    --sidebar-width: 0px;
   }
   
   .sidebar {
-    transform: translateX(-100%);
+    display: none;
+    position: fixed;
+    width: 280px;
+    height: 100vh;
+    z-index: 1000;
+    box-shadow: var(--shadow-lg);
   }
   
   .sidebar.active {
-    transform: translateX(0);
-    width: 280px;
-  }
-  
-  .mobile-toggle {
     display: block;
   }
   
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .sidebar-toggle-btn {
+    display: flex;
+  }
+  
+  /* Adjust header to make room for the toggle button */
+  .main-header {
+    padding-left: 70px;
+  }
+  
+  /* Overlay for mobile sidebar */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+  
+  .sidebar-overlay.active {
+    display: block;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
   .header-search {
-    width: 200px;
+    width: 120px;
   }
   
   .user-menu span {
     display: none;
   }
   
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
-  .main-header {
-    padding: 0 1rem;
-  }
-  
-  .content-section {
-    padding: 1rem;
-  }
-  
-  .header-search {
-    width: 150px;
+  .header-actions {
+    gap: 0.5rem;
   }
 }
 
