@@ -87,28 +87,38 @@ document.querySelectorAll('.feature-card').forEach(card => {
 });
 
 // Theme toggle functionality
-const themeToggle = document.querySelector('.theme-toggle');
-const themeIcon = themeToggle.querySelector('i');
+const mainThemeToggle = document.querySelector('.theme-toggle');
+const mobileThemeToggle = document.querySelector('.mobile-theme-toggle');
+const themeIcons = document.querySelectorAll('.theme-toggle i');
 
 // Check for saved theme preference
 const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
     document.body.classList.toggle('light-theme', savedTheme === 'light');
-    themeIcon.classList.toggle('fa-sun', savedTheme === 'light');
-    themeIcon.classList.toggle('fa-moon', savedTheme === 'dark');
+    themeIcons.forEach(icon => {
+        icon.classList.toggle('fa-sun', savedTheme === 'light');
+        icon.classList.toggle('fa-moon', savedTheme === 'dark');
+    });
 }
 
-themeToggle.addEventListener('click', () => {
+// Function to toggle theme
+function toggleTheme() {
     document.body.classList.toggle('light-theme');
     const isLight = document.body.classList.contains('light-theme');
-
-    // Update icon
-    themeIcon.classList.toggle('fa-sun', isLight);
-    themeIcon.classList.toggle('fa-moon', !isLight);
-
+    
+    // Update all icons
+    themeIcons.forEach(icon => {
+        icon.classList.toggle('fa-sun', isLight);
+        icon.classList.toggle('fa-moon', !isLight);
+    });
+    
     // Save preference
     localStorage.setItem('theme', isLight ? 'light' : 'dark');
-});
+}
+
+// Add event listeners to both toggles
+mainThemeToggle.addEventListener('click', toggleTheme);
+mobileThemeToggle.addEventListener('click', toggleTheme);
 
 // Update navbar background based on theme
 window.addEventListener('scroll', () => {
