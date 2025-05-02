@@ -770,7 +770,7 @@ body {
     background: #28a745;
 }
 
-/* Chatbot Icon Styles */
+/* Simple Chatbot Icon Styles */
 .chatbot-icon {
   position: fixed;
   bottom: 30px;
@@ -796,21 +796,4 @@ body {
 
 .chatbot-icon i {
   font-size: 24px;
-}
-
-/* Pulse animation for chatbot icon */
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(var(--primary-rgb), 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(var(--primary-rgb), 0);
-  }
 }
