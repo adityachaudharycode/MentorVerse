@@ -20,7 +20,7 @@ Mentorverse is a platform connecting students with mentors from top institutions
 - Backend: Firebase
 - Real-time Communication: WebSocket
 - Authentication: Firebase Auth
-- Database: Firestore
+- Database: Firestore database 
 
 ## Getting Started
 
