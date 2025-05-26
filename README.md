@@ -69,6 +69,8 @@ mail me at adityachaudhary834@gmail.com for contributing first then follow the s
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 I will merge if i find it interesting and helping for project 
+Feel free to contribute and contact.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
