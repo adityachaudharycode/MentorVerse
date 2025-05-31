@@ -22,7 +22,7 @@ Mentorverse is a platform connecting students with mentors from top institutions
 - Authentication: Firebase 
 - Database: Firestore database 
 
-## Getting Started
+## Steps to run
 
 1. Clone the repository:
 ```bash
