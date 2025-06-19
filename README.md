@@ -60,7 +60,7 @@ project/
 └── styles/
 ```
 
-## Contributing
+## For Contributing
 
 mail me at adityachaudhary834@gmail.com for contributing first then follow the steps:-
 1. Fork the repository
