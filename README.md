@@ -75,7 +75,7 @@ Feel free to contribute and contact.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Development Team are as follows
+## Development Team are as follows 👇 
 
 - Aditya Chaudhary - Landing page, Authentication & Backend , Live chat, Chatbot
 - Ankita Patra - Mentor Page
