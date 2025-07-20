@@ -71,7 +71,7 @@ mail me at adityachaudhary834@gmail.com for contributing first then follow the s
 I will merge if i find it interesting and helping for project 
 Feel free to contribute and contact.
 
-## License
+## License 👇
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
