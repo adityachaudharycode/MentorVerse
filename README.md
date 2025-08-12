@@ -1,4 +1,4 @@
-# Mentorverse 👇 
+# About Mentorverse 👇 
 
 Mentorverse is a platform connecting students with mentors from top institutions like IITs and NITs, facilitating educational guidance and career development.
 
