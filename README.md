@@ -10,7 +10,7 @@ Mentorverse is a platform connecting students with mentors from top institutions
 - Real-time chat service 
 - Resource sharing platform
 - Analytics dashboard for mentors
-- Student progress tracking easily
+- Student progress tracking easily done
 - Scheduling system for mentoring sessions will be so useful for them
 
 
