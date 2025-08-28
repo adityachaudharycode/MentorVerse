@@ -16,7 +16,7 @@ Mentorverse is a platform connecting students with mentors from top institutions
 
 ## Tech Stack used are as follows 👇 
 
-- Frontend:HTML, CSS, JavaScript, React, TypeScript, Tailwind CSS
+- Frontend:HTML, CSS, JavaScript, ReactJs, TypeScript, Tailwind CSS
 - Backend: Firebase DataStore 
 - Real-time Communication: WebSocket protocol 
 - Authentication: Firebase Authentication 
