@@ -68,11 +68,10 @@ mail me at adityachaudhary834@gmail.com for contributing first then follow the s
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-I will merge if i find it interesting and helping for project 
+I will merge if i find it interesting and helping for the project 
 Feel free to contribute and contact.
 
 ## License for our project👇
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Development Team are as follows 👇 
