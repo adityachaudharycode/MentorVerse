@@ -63,7 +63,7 @@ project/
 ## For Contributing follow the steps below as follows 👇
 
 mail me at adityachaudhary834@gmail.com for contributing first then follow the steps:-
-1. Fork the repository
+1. Fork the repo then
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
