@@ -17,13 +17,13 @@ Mentorverse is a platform connecting students with mentors from top institutions
 ## Tech Stack used are as follows 👇 
 
 - Frontend:HTML, CSS, JavaScript, ReactJs, TypeScript, Tailwind CSS
-- Backend: Firebase storage and flask(python3)
+- Backend: Firebase storage and flask for chatbot
 - Real-time Communication: WebSocket protocol for live chat
 - Authentication: Firebase Authentication 
 - Database: Firestore database 
 
 ## Steps to run our Webapp are as follows 👇 
-first 
+
 1. Clone the repository:
 ```bash command
 git clone https://github.com/adityachaudharycode/MentorVerse
