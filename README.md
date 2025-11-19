@@ -18,7 +18,7 @@ Mentorverse is a platform connecting students with mentors from top institutions
 
 - Frontend:HTML, CSS, JavaScript, ReactJs, TypeScript, Tailwind CSS
 - Backend: Firebase storage and flask for chatbot
-- Real-time Communication: WebSocket protocol for live chat
+- Real-time Communication: WebSocket protocol for live chat or firebase realtime db
 - Authentication: Firebase Auth
 - Database: Firestore database 
 
