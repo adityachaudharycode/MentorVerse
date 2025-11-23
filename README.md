@@ -7,7 +7,7 @@ Mentorverse is a platform connecting students with mentors from top institutions
 ## Features of our webapp are given below as follows 👇 
 
 - Mentor-student matching system 
-- Real-time chat service so that student nd teacher can interact
+- In Real-time chat service so that student nd teacher can interact
 - Resource sharing platform for students and teachers 
 - Analytics dashboard for mentors and students with graphical data
 - Student progress tracks easily
