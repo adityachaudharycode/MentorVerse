@@ -67,7 +67,7 @@ mail me at adityachaudhary834@gmail.com(for faster pr approval) for contributing
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+5. Open a Pull Request and try to solve any issuess if there
 I will merge if i find it interesting and helping for the project 
 Feel free to contribute and contact.
 
