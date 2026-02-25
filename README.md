@@ -70,7 +70,7 @@ mail me at adityachaudhary834@gmail.com(for faster pr approval) for contributing
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request and try to solve any issuess if there
 I will merge if i find it interesting and helping for the project 
-Feel free to contribute and contact.
+Feel free to contribute and contact when needed.
 
 ## License for our project👇
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
