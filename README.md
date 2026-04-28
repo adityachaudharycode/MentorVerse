@@ -25,7 +25,7 @@ Mentorverse is a platform connecting students with mentors from top institutions
 
 ## Steps to run our Webapp are as follows 👇 
 
-1. Clone the repository as given:
+1. Clone the repository as given as:
 ```bash command
 git clone https://github.com/adityachaudharycode/MentorVerse
 cd MentorVerse
